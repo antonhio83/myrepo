@@ -1,0 +1,19 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "TikTok Transcript Fetcher",
+  "name_for_model": "tiktok_transcript",
+  "description_for_human": "Estrae la trascrizione da video TikTok usando TokBackup",
+  "description_for_model": "Plugin per ottenere la trascrizione di uno o più video TikTok tramite l’endpoint TokBackup.",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "openapi",
+    "url": "https://TUO_HOSTING.example.com/openapi.json",
+    "is_user_authenticated": false
+  },
+  "logo_url": "https://TUO_HOSTING.example.com/logo.png",
+  "contact_email": "tuo@domain.com",
+  "legal_info_url": "https://tuo.domain.com/privacy"
+}
+
