@@ -1,0 +1,55 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "TikTok Transcript Fetcher",
+    "version": "v1"
+  },
+  "paths": {
+    "/v1/tiktok/fetchMultipleTikTokData": {
+      "post": {
+        "summary": "Ottieni trascrizione da video TikTok",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "videoUrls": {
+                    "type": "array",
+                    "items": { "type": "string", "format": "uri" }
+                  }
+                },
+                "required": ["videoUrls"]
+              },
+              "example": {
+                "videoUrls": ["https://www.tiktok.com/@kolino84/video/7480516653348834582"]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Risposta con la trascrizione",
+            "content": {
+              "application/json": {
+                "schema": { "type": "object" }
+              }
+            }
+          }
+        },
+        "x-code-samples": [
+          {
+            "lang": "cURL",
+            "source": "curl -X POST \"https://scriptadmin.tokbackup.com/v1/tiktok/fetchMultipleTikTokData?get_transcript=true&ip=91.80.30.251\" \\\n  -H \"Content-Type: application/json\" \\\n  -H \"x-api-key: Toktools2024!NowMust\" \\\n  --data-raw '{\"videoUrls\":[\"https://www.tiktok.com/@kolino84/video/7480516653348834582\"]}'"
+          }
+        ]
+      }
+    }
+  },
+  "servers": [
+    {
+      "url": "https://scriptadmin.tokbackup.com"
+    }
+  ]
+}
